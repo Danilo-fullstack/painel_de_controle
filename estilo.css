@@ -1,0 +1,283 @@
+@charset "utf-8";
+@font-face {
+    font-family: Advent Pro;
+    src: url(./fonts/Advent_Pro/static/AdventPro/AdventPro-SemiBold.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+ul, li {
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+}
+body{
+    background-color: #23222a;
+    font-family: "Advent Pro", sans-serif;
+    font-size: 14pt;
+    color: white;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+
+
+/* ----- MENU ----- */
+nav {
+    width: 100%;
+    background-color: #e65454;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 10px;
+}
+.item a {
+    font-size: 18pt;
+    color: rgb(255, 255, 255);
+    padding: 10px 30px;
+    display: inline-block;
+    transition: 0.3s;
+    text-shadow: 1px 1px 1px #23222a;
+}
+
+.menu .item a:hover{
+    /* color: #23222a; */
+    text-shadow: 1px 1px 5px #23222af6;
+}
+
+
+/* --- index boas vindas --- */
+.texto-index {
+    color: #ffffff;
+    padding: 40px;
+    text-shadow: 2px 2px 1px #0e0e0f;
+}
+.botoes-index {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    column-gap: 40px;
+}
+.botoes-index a {
+    width: 150px;
+    display: inline-block;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e65454;
+    text-shadow: 1px 1px 1px #23222a;
+    transition: 0.3s;
+}
+.botoes-index a:hover {
+    background-color: #dd4040;
+    box-shadow: 3px 3px 7px #00000085;
+}
+
+
+/* Página de Login e Cadastro */
+
+.box {
+    /* background-color: #242222; */
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+    font-family: "Advent Pro", sans-serif;
+}
+form h2 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.842);
+}
+.inputBox {
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+}
+.inputBox input, .inputBox select, .inputBox option{
+    width: 100%;
+    position: relative;
+    font-size: 14pt;
+    padding: 10px 10px 10px;
+    outline: none;
+    background-color: transparent;
+    font-family: "Advent Pro", sans-serif;
+    box-shadow: none;
+    border: none;
+    z-index: 10;
+    transition: 1s;
+    color: transparent;
+}
+.inputBox input:valid,
+.inputBox input:focus{
+    color: rgb(46, 46, 46);
+}
+.inputBox span {
+    text-shadow: 1px 1px 1px #23222ac9;
+    font-size: 14pt;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px 0px 10px;
+    pointer-events: none;
+    transition: 0.4s;
+    z-index: 11;
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span
+ {
+    color: #ffffff;
+    transform: translate(0px, -38px);
+    font-size: 11pt;
+}
+
+.inputBox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 5px black;
+    /* pointer-events: none; */
+    transition: 0.4s;
+}
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i{
+    height: 44px;
+    z-index: 9;
+}
+
+.semefeitoinput input {
+    color: rgb(46, 46, 46);
+}
+.semefeitoinput input ~ span {
+    color: #ffffff;
+    transform: translate(0px, -38px);
+    font-size: 11pt;
+}
+.semefeitoinput input ~ i{
+    height: 44px;
+    z-index: 9;
+}
+.inputBox input[type= date] {
+    color: rgb(46, 46, 46);
+}
+
+.box-select {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3px;
+}
+.box-select span {
+    pointer-events: none;
+    text-align: start;
+    font-family: "Advent Pro", sans-serif;
+    font-size: 11pt;
+}
+.box-select select {
+    cursor: pointer;
+    height: 44px;
+    font-size: 14pt;
+    font-family: "Advent Pro", sans-serif;
+    color: rgb(46, 46, 46);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 5px black;
+}
+
+.sexo {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    width: 100%;
+}
+.sexo span{
+    pointer-events: none;
+    font-size: 11pt;
+    display: inline-block;
+    text-align: left;
+}
+.sexo fieldset {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+.sexo fieldset label, input[type= radio]{
+    font-size: 14pt;
+    cursor: pointer;
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.links a {
+    color: rgb(141, 141, 141);
+    font-size: 12pt;
+    transition: 0.5s;
+    font-family: "Advent Pro", sans-serif;
+}
+.links a:hover {
+    color: #e65454;
+    text-shadow: 2px 1px 4px #e654543b;
+}
+input[type= submit] {
+    font-family: "Advent Pro", sans-serif;
+    font-size: 14pt;
+    margin-top: -10px;
+    color: #ffffff;
+    background-color: #e65454;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 3px 3px 7px #0000002a;
+    text-shadow: 1px 1px 1px #23222ac9;
+}
+input[type= submit]:hover {
+    background-color: #dd4040;
+    box-shadow: 3px 3px 7px #00000085;
+}
+
+
+.popup_login {
+    margin: 20px;
+}
+.popup_login p {
+    color: #dd4040;
+    font-size: 12pt;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}

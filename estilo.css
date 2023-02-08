@@ -1,7 +1,7 @@
 @charset "utf-8";
 @font-face {
     font-family: Advent Pro;
-    src: url(./fonts/Advent_Pro/static/AdventPro/AdventPro-SemiBold.ttf);
+    src: url(./fonts/Advent_Pro/AdventPro-SemiBold.ttf);
 }
 
 * {
@@ -59,6 +59,7 @@ nav {
 .texto-index {
     color: #ffffff;
     padding: 40px;
+    margin: 20px;
     text-shadow: 2px 2px 1px #0e0e0f;
 }
 .botoes-index {
@@ -66,7 +67,7 @@ nav {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 30px;
+    margin: 20px;
     column-gap: 40px;
 }
 .botoes-index a {

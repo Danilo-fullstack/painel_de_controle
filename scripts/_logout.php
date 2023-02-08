@@ -1,9 +1,5 @@
 <?php
-session_start();
-// if(isset($_SESSION['nome'])) {
-    
-// }
-
+    session_start();
     session_destroy();
     header("Location: ../index.php");
     exit();

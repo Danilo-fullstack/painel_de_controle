@@ -1,9 +1,8 @@
 <?php
-include('./scripts/_verifica_login.php');
-
-if(isset($_SESSION['nome']) == true) {
-    echo 'Nome existe';
-    echo '</br>Aqui está: ', $_SESSION['nome'];
+session_start();
+if (isset($_SESSION['nome'])) {
+    header('Location: ./painel.php');
+    exit();
 }
 ?>
 <!DOCTYPE html>
@@ -16,7 +15,7 @@ if(isset($_SESSION['nome']) == true) {
     <title>Painel de Controle</title>
 </head>
 <body>
-    <a href="./scripts/_logout.php">Sair</a>
+    <!-- <a href="./scripts/_logout.php">Sair</a> -->
     <nav>
         <ul class="menu">
             <li class="item"><a href="./">Home</a></li>

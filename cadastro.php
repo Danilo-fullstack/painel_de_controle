@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION['nome'])) {
+    header('Location: ./painel.php');
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,7 +22,7 @@
     </nav>
 
     <div class="box">
-        <form action="" autocomplete="off">
+        <form action="./scripts/_cadastrar.php" method="POST" autocomplete="off">
             <h2>Cadastro</h2>
             <div class="inputBox semefeitoinput">
                 <input type="email" name="email" id="email" class="inputEmail" required placeholder="Email">
@@ -38,18 +45,18 @@
                 <i></i>
             </div>
             <div class="inputBox semefeitoinput">
-                <input type="tel" name="" id="celular" class="inputCelular" required placeholder="(00) 00000-0000">
+                <input type="tel" name="celular" id="celular" class="inputCelular" required placeholder="(00) 00000-0000">
                 <span>Celular</span>
                 <i></i>
             </div>
             <div class="inputBox semefeitoinput">
-                <input type="text" name="senha" id="cidade" class="inputPass" required placeholder="Cidade">
+                <input type="text" name="cidade" id="cidade" class="inputCidade" required placeholder="Cidade" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$">
                 <span>Cidade</span>
                 <i></i>
             </div>
             <div class="box-select">
                 <span>Estado</span>
-                <select id="uf" required>
+                <select id="uf" name="uf" required>
                     <option selected disabled value="">Selecione</option>
                     <option value="RO">Roraima</option>
                     <option value="AC">Acre</option>
@@ -84,9 +91,9 @@
             <div class="sexo">
                 <span>Sexo</span>
                 <fieldset required>
-                    <input type="radio" name="sexo" id="feminino" class="inputFeminino">
+                    <input type="radio" name="sexo" id="feminino" class="inputFeminino" value="F">
                     <label for="feminino">Feminino</label>
-                    <input type="radio" name="sexo" id="masculino" class="inputMasculino">
+                    <input type="radio" name="sexo" id="masculino" class="inputMasculino" value="M">
                     <label for="masculino">Masculino</label>
                 </fieldset>
                 <!-- <i></i> -->

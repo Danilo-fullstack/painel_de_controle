@@ -88,6 +88,11 @@ if (isset($_SESSION['nome'])) {
                 </select>
                 <!-- <i></i> -->
             </div>
+            <div class="inputBox semefeitoinput">
+                <input type="text" name="cep" id="cep" class="inputCep" required placeholder="00000-000">
+                <span>Cep</span>
+                <i></i>
+            </div>
             <div class="sexo">
                 <span>Sexo</span>
                 <fieldset required>
@@ -98,6 +103,13 @@ if (isset($_SESSION['nome'])) {
                 </fieldset>
                 <!-- <i></i> -->
             </div>
+            <?php if(isset($_SESSION['userexiste'])): ?>
+            <div class="popup_login">
+                <div>
+                    <p>Usuário já existe</p>
+                </div>
+            </div>
+            <?php session_destroy(); endif; ?>
             <div class="links">
                 <a href="./login.php">Já tenho login</a>
             </div>
@@ -108,7 +120,8 @@ if (isset($_SESSION['nome'])) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script>
         $('.inputNascimento').mask('00/00/0000');
-        $('#celular').mask('(00) 0000-00000');
+        $('.inputCelular').mask('(00) 0000-00000');
+        $('.inputCep').mask('00000-000');
     </script>
 </body>
 </html>

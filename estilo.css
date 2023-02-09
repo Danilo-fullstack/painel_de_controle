@@ -187,6 +187,7 @@ form h2 {
 }
 
 .box-select {
+    margin-top: -13px;
     width: 100%;
     display: flex;
     flex-direction: column;

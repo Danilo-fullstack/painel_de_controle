@@ -40,7 +40,7 @@ if (isset($_SESSION['nome'])) {
             </div>
             <input type="submit" value="Entrar">
         </form>
-        <div class="popup_login">
+        <div class="popup_notificacao">
             <?php if(isset($_SESSION['nome'])): ?>
             <div>
                 <p>Email ou senha incorreta</p>

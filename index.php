@@ -29,9 +29,9 @@ if (isset($_SESSION['nome'])) {
         <div>
             <a href="./login.php">Entrar</a>
         </div>
-        <div>
+        <!-- <div>
             <a href="./cadastro.php">Cadastrar</a>
-        </div>
+        </div> -->
     </div>
 </body>
 </html>

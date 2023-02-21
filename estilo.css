@@ -23,6 +23,7 @@ body{
 }
 a {
     text-decoration: none;
+    color: white;
 }
 
 
@@ -40,7 +41,7 @@ nav {
     justify-content: center;
     column-gap: 10px;
 }
-.item a {
+.item a, .sair a{
     font-size: 18pt;
     color: rgb(255, 255, 255);
     padding: 10px 30px;
@@ -52,6 +53,9 @@ nav {
 .menu .item a:hover{
     /* color: #23222a; */
     text-shadow: 1px 1px 5px #23222af6;
+}
+.sair a {
+    background-color: rgb(201, 78, 78);
 }
 
 
@@ -212,26 +216,26 @@ form h2 {
     box-shadow: 1px 1px 5px black;
 }
 
-.sexo {
+.inputradio {
     display: flex;
     flex-direction: column;
     row-gap: 5px;
     width: 100%;
 }
-.sexo span{
+.inputradio span{
     pointer-events: none;
     font-size: 11pt;
     display: inline-block;
     text-align: left;
 }
-.sexo fieldset {
+.inputradio fieldset {
     border: none;
     display: flex;
     flex-direction: row;
     column-gap: 10px;
 }
 
-.sexo fieldset label, input[type= radio]{
+.inputradio fieldset label, input[type= radio]{
     font-size: 14pt;
     cursor: pointer;
 }
@@ -274,12 +278,14 @@ input[type= submit]:hover {
     box-shadow: 3px 3px 7px #00000085;
 }
 
-
-.popup_login {
-    margin: 20px;
+.popup_notificacao {
+    background-color: #e65454;
+    width: 100%;
+    border-radius: 5px;
 }
-.popup_login p {
-    color: #dd4040;
+.popup_notificacao p {
+    padding: 10px 0;
+    color: #ffffff;
     font-size: 12pt;
     text-shadow: 1px 1px 2px rgb(0, 0, 0);
 }

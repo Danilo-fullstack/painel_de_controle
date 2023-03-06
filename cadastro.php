@@ -16,8 +16,6 @@
             <li class="item"><a href="./painel.php">Home</a></li>
             <li class="item"><a href="./cadastro.php">Cadastrar</a></li>
             <li class="item"><a href="./listagem.php">Listar</a></li>
-            <li class="item"><a href="./atualizacao.php">Atualizar</a></li>
-            <li class="item"><a href="./remocao.php">Deletar</a></li>
         </ul>
         <div class="sair">
             <a href="./scripts/_logout.php">Sair</a>
@@ -118,16 +116,6 @@
                     <label for="feminino">Feminino</label>
                     <input type="radio" name="sexo" id="masculino" class="inputMasculino" value="M" checked>
                     <label for="masculino">Masculino</label>
-                </fieldset>
-                <!-- <i></i> -->
-            </div>
-            <div class="inputradio">
-                <span>Tipo</span>
-                <fieldset required>
-                    <input type="radio" name="tipo" id="user" class="inputUser" value="user" checked>
-                    <label for="user">Usuário</label>
-                    <input type="radio" name="tipo" id="adm" class="inputAdm" value="adm">
-                    <label for="adm">Administrador</label>
                 </fieldset>
                 <!-- <i></i> -->
             </div>

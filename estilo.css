@@ -289,3 +289,16 @@ input[type= submit]:hover {
     font-size: 12pt;
     text-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
+
+/* Página Listagem */
+
+/* .box-listagem {
+    background-color: red;
+} */
+
+.box-lista-user {
+    min-height: 300px;
+    width: 400px;
+    background-color: #1e1d24;
+
+}

@@ -18,8 +18,6 @@
             <li class="item"><a href="./painel.php">Home</a></li>
             <li class="item"><a href="./cadastro.php">Cadastrar</a></li>
             <li class="item"><a href="./listagem.php">Listar</a></li>
-            <li class="item"><a href="./atualizacao.php">Atualizar</a></li>
-            <li class="item"><a href="./remocao.php">Deletar</a></li>
         </ul>
         <div class="sair">
             <a href="./scripts/_logout.php">Sair</a>

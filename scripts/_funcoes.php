@@ -10,5 +10,7 @@ function converterCelular(){
     $celular = str_replace($procurar, '', $_POST['celular']);
     return $celular;
 }
-
+function listagemHtml(){
+    echo "Teste";
+}
 ?>
